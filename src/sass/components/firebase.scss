@@ -1,0 +1,575 @@
+.backdrop-fr {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color-header);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  opacity: 1;
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+}
+.modal-container {
+  // position: relative;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0px 8px 43px var(--primary-text-color);
+}
+.form-button {
+  z-index: 4;
+  position: relative;
+  // background-image: url(../image/header-mob.jpg),
+  //   url(../image/header-mob1x.webp), url(../image/header-mob2x.webp);
+  background-image: linear-gradient(
+    45deg,
+    hsl(0deg 35% 17%) 0%,
+    hsl(355deg 51% 19%) 20%,
+    hsl(353deg 61% 19%) 28%,
+    hsl(358deg 57% 17%) 36%,
+    hsl(0deg 56% 12%) 50%,
+    hsl(30deg 100% 0%) 99%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 40px 15px;
+  border-radius: 7px;
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: var(--primary-text-color);
+      transform: rotate(-45deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: var(--primary-text-color);
+      transform: rotate(45deg);
+    }
+  }
+
+  @media screen and (min-width: $mobile) {
+    width: 320px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 420px;
+    padding: 50px 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 500px;
+    padding: 50px 30px;
+  }
+  &__text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.13;
+    font-size: 14px;
+    color: var(--primary-text-color);
+    margin-bottom: 30px;
+  }
+}
+
+.form-sighUp {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms var(--timing-function);
+  background-image: linear-gradient(
+    45deg,
+    hsl(0deg 35% 17%) 0%,
+    hsl(355deg 51% 19%) 20%,
+    hsl(353deg 61% 19%) 28%,
+    hsl(358deg 57% 17%) 36%,
+    hsl(0deg 56% 12%) 50%,
+    hsl(30deg 100% 0%) 99%
+  );
+  background-color: var(--bg-color-header);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+  padding: 30px 20px;
+  width: 100%;
+
+  @media screen and (min-width: $mobile) {
+    width: 300px;
+    padding: 40px 20px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 420px;
+    padding: 50px 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 500px;
+    padding: 60px 30px;
+  }
+
+  &__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.13;
+    margin-bottom: 10px;
+    color: var(--primary-text-color);
+    font-size: 18px;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: var(--primary-text-color);
+      transform: rotate(-45deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: var(--primary-text-color);
+      transform: rotate(45deg);
+    }
+  }
+}
+.form-login {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 250ms var(--timing-function);
+
+  background-image: linear-gradient(
+    45deg,
+    hsl(0deg 35% 17%) 0%,
+    hsl(355deg 51% 19%) 20%,
+    hsl(353deg 61% 19%) 28%,
+    hsl(358deg 57% 17%) 36%,
+    hsl(0deg 56% 12%) 50%,
+    hsl(30deg 100% 0%) 99%
+  );
+  background-color: var(--bg-color-header);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 7px;
+  box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.6);
+  padding: 30px 20px;
+  width: 100%;
+
+  @media screen and (min-width: $mobile) {
+    width: 300px;
+    padding: 40px 20px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 420px;
+    padding: 50px 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 500px;
+    padding: 60px 30px;
+  }
+
+  &__title {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.13;
+    margin-bottom: 10px;
+    color: var(--primary-text-color);
+    font-size: 18px;
+
+    @media screen and (min-width: $mobile) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: $tablet) {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+  }
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: transparent;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: var(--primary-text-color);
+      transform: rotate(-45deg);
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: var(--primary-text-color);
+      transform: rotate(45deg);
+    }
+  }
+}
+#usernameSighUp {
+  min-width: 100%;
+  padding: 5px;
+  border: 0;
+  border-bottom: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  margin-bottom: 10px;
+  background-color: transparent;
+  &::placeholder {
+    color: var(--primary-text-color);
+  }
+}
+
+#password,
+#passwordSighUp {
+  min-width: 100%;
+  padding: 5px;
+  border: 0;
+  border-bottom: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  margin-bottom: 30px;
+  background-color: transparent;
+  &::placeholder {
+    color: var(--primary-text-color);
+  }
+}
+#email,
+#emailSighUp {
+  min-width: 100%;
+  padding: 5px;
+  border: 0;
+  border-bottom: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  margin-bottom: 10px;
+  background-color: transparent;
+  &::placeholder {
+    color: var(--primary-text-color);
+  }
+}
+#sighUp,
+#login,
+.sign-up,
+.sign-in {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: rgba(255, 107, 1, 0.39);
+  border-radius: 5px;
+  border: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  transition: background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-accent-color);
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.695);
+  }
+
+  width: 110px;
+  height: 44px;
+
+  @media screen and (min-width: $desktop) {
+    width: 148px;
+    height: 42px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 152px;
+  }
+}
+.sign-in {
+  margin-left: 20px;
+}
+
+.backdrop-fr.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.form-login.hidden,
+.form-sighUp.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.form-login.hidden {
+  transform: translate(50%, -50%);
+}
+.form-sighUp.hidden {
+  transform: translate(-150%, -50%);
+}
+.form-button.hidden {
+  display: none;
+}
+.login-user {
+  z-index: 4;
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+
+  &__btn {
+    position: relative;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    margin-left: 8px;
+    transition: transform 250ms var(--timing-function);
+    @media screen and (min-width: $tablet) {
+      width: 18px;
+      height: 18px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 22px;
+      height: 22px;
+    }
+    &:hover,
+    &:focus {
+      transform: scale(1.3);
+    }
+  }
+  &__name {
+    color: var(--primary-text-color);
+    font-size: 8px;
+    @media screen and (min-width: $tablet) {
+      font-size: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 12px;
+    }
+  }
+
+  &__text {
+    color: var(--primary-text-color);
+    font-size: 8px;
+    @media screen and (min-width: $tablet) {
+      font-size: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 12px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 12px;
+    height: 12px;
+    display: block;
+    fill: var(--primary-text-color);
+    transition: transform 250ms var(--timing-function);
+    &:hover,
+    &:focus {
+      -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.7));
+      filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.7));
+    }
+    &.hidden,
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: 15px;
+      height: 15px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+.user-exit {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--bg-color-header);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 15px;
+  opacity: 1;
+
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+}
+.user-exit.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.user-exit__modal {
+  z-index: 4;
+  overflow: hidden;
+  box-shadow: 0px 8px 43px var(--primary-text-color);
+  background-image: linear-gradient(
+    45deg,
+    hsl(0deg 35% 17%) 0%,
+    hsl(355deg 51% 19%) 20%,
+    hsl(353deg 61% 19%) 28%,
+    hsl(358deg 57% 17%) 36%,
+    hsl(0deg 56% 12%) 50%,
+    hsl(30deg 100% 0%) 99%
+  );
+  background-color: var(--bg-color-header);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 40px 15px;
+  border-radius: 7px;
+  @media screen and (min-width: $mobile) {
+    width: 320px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 420px;
+    padding: 50px 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 500px;
+    padding: 50px 30px;
+  }
+}
+.user-exit__text {
+  color: var(--primary-text-color);
+  margin-bottom: 20px;
+}
+.user-exit__ok {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: rgba(255, 107, 1, 0.39);
+  border-radius: 5px;
+  border: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  transition: background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-accent-color);
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.695);
+  }
+  width: 80px;
+  height: 24px;
+
+  @media screen and (min-width: $desktop) {
+    width: 100px;
+    height: 32px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 120px;
+  }
+}
+.user-exit__not {
+  margin-left: 20px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  background-color: rgba(255, 107, 1, 0.39);
+  border-radius: 5px;
+  border: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  transition: background-color 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+  &:hover,
+  &:focus {
+    background-color: var(--btn-accent-color);
+    box-shadow: 0px 8px 43px rgba(255, 107, 1, 0.695);
+  }
+  width: 80px;
+  height: 24px;
+
+  @media screen and (min-width: $desktop) {
+    width: 100px;
+    height: 32px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 120px;
+  }
+}

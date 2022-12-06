@@ -1,0 +1,185 @@
+.header-library {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Roboto', sans-serif;
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+    url(../image/header-Lib-mob1x.webp);
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../image/header-Lib-mob2x.webp);
+  }
+
+  @media (min-width: 1280px) {
+    padding-bottom: 44px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../image/header-Lib-desk1x.webp);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../image/header-Lib-desk2x.webp);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1279px) {
+    padding-bottom: 81px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
+      url(../image/header-Lib-tab1x.webp);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          rgba(0, 0, 0, 0.56),
+          rgba(0, 0, 0, 0.56)
+        ),
+        url(../image/header-Lib-tab2x.webp);
+    }
+  }
+}
+
+.header-library-nav {
+  display: flex;
+  margin-bottom: 54px;
+  line-height: 1.17;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.header-library-nav__wrap {
+  display: flex;
+  align-items: center;
+}
+.header-library-nav__logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  stroke: var(--primary-text-color);
+  animation: SVGrotate 6s infinite;
+  @media screen and (min-width: 1280px) {
+    margin-right: 10px;
+  }
+}
+.logo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes SVGrotate {
+  // 0% {
+  //   transform: rotate(0deg);
+  // }
+  // 50% {
+  //   transform: rotate(360deg);
+  // }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.header-library-nav__text {
+  display: contents;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  font-weight: 500;
+  font-size: 30px;
+  color: var(--primary-text-color);
+  margin: 0 0;
+  line-height: 1.17;
+  transition: text-shadow 250ms var(--timing-function);
+
+  &:hover {
+    text-shadow: 0 -1px 4px #fff, 0 -2px 10px #ff0, 0 -10px 20px #ff8000,
+      0 -18px 40px #f00;
+  }
+}
+.header-library-nav__list {
+  display: flex;
+}
+.header-library-nav__item:not(:last-child) {
+  margin-right: 39px;
+}
+.header-library-nav__link {
+  position: relative;
+  line-height: 1.17;
+  padding: 4px 0;
+  font-size: 12px;
+  color: var(--primary-text-color);
+  transition: text-shadow 250ms var(--timing-function);
+
+  &:hover {
+    text-shadow: 0 -1px 4px #fff, 0 -2px 10px #ff0, 0 -10px 20px #ff8000,
+      0 -18px 40px #f00;
+  }
+}
+.current-page::after {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--notification-text-color);
+  border-radius: 2px;
+  transition: background-color, opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-library__btn-list {
+  display: flex;
+  justify-content: center;
+}
+
+.header-library__btn-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.header-library__button {
+  z-index: 999;
+  font-size: 12px;
+  min-width: 129px;
+  padding: 13px 15px;
+  line-height: 1.34;
+  background-color: transparent;
+  border: 1px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  border-radius: 5px;
+  transition: box-shadow 250ms linear, background-color 250ms linear;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-accent-color);
+    box-shadow: 0px 0px 7px 1px rgba(255, 255, 255, 0.53);
+    border: 1px solid var(--btn-accent-color);
+  }
+
+  @media (min-width: 768px) {
+    min-width: 152px;
+    padding: 13px 15px;
+    line-height: 1.33;
+  }
+
+  @media (min-width: 1280px) {
+    min-width: 147px;
+    padding: 13px 13px;
+  }
+}
+
+.active_btn {
+  background-color: var(--btn-accent-color);
+  border: 1px solid var(--btn-accent-color);
+  color: var(--primary-text-color);
+}

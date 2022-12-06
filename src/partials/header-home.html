@@ -1,0 +1,72 @@
+<header class="header">
+  <div class="container">
+    <nav class="header-nav">
+      <a class="logo-link" href="./index.html">
+        <svg class="header-nav__logo">
+          <use href="./image/icons.svg#film"></use>
+        </svg>
+      </a>
+
+      <a class="header-nav__text" href="./index.html">Filmoteka</a>
+
+      <ul class="header-nav__list">
+        <li class="header-nav__item">
+          <a class="header-nav__link current-page" href="./index.html">HOME</a>
+        </li>
+        <li class="header-nav__item">
+          <a
+            id="firebase-library"
+            class="header-nav__link"
+            href="./library.html"
+            >MY LIBRARY</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <form class="header-search">
+      <input
+        name="querySearch"
+        class="header-search-input"
+        type="text"
+        placeholder="Movie search"
+      />
+      <button type="submit" class="header__button">
+        <svg class="header-search-icon">
+          <use href="./image/icons.svg#search"></use>
+        </svg>
+      </button>
+      <p class="request-paragraph visually-hidden">
+        Search result not successful. Enter the correct movie name.
+      </p>
+    </form>
+
+    <div class="container error-container"></div>
+  </div>
+  <div class="switcher">
+    <button class="switcher-theme-name">
+      <svg
+        class="theme-switch-icon"
+        width="20px"
+        height="20px"
+        role="img"
+        aria-label="Іконка сонця"
+      >
+        <use href="./image/symbol-defs.svg#sun"></use>
+      </svg>
+    </button>
+    <label class="switch">
+      <input type="checkbox" id="theme-switch" />
+      <span class="slider round"></span>
+    </label>
+    <button class="switcher-theme-name">
+      <svg
+        class="theme-switch-icon"
+        width="20px"
+        height="20px"
+        aria-label="Іконка місяця"
+      >
+        <use href="./image/symbol-defs.svg#moon"></use>
+      </svg>
+    </button>
+  </div>
+</header>

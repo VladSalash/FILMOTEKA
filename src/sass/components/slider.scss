@@ -1,0 +1,136 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.slider-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background: rgb(0, 0, 0);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (max-width: $desktop) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.swiper-slider__wrapper.swiper {
+  overflow: inherit;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgba(255, 0, 0, 0.5);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  border-radius: 5px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgba(94, 68, 45, 0.6);
+  transition: transform 250ms var(--timing-function),
+    color 250ms var(--timing-function), border 250ms var(--timing-function),
+    box-shadow 250ms var(--timing-function);
+  &:hover {
+    transform: scale(1.3);
+    color: rgb(255, 0, 0);
+    border: 1px solid rgb(255, 0, 0);
+    box-shadow: 0px 0px 15px 10px rgb(255, 0, 0);
+  }
+}
+
+.swiper-slider__wrapper {
+  box-shadow: 0px 0px 15px 2px rgb(94, 94, 94);
+
+  list-style: none;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.swiper-slider__wrapper:before {
+  content: '';
+  border-radius: 15px;
+  display: block;
+  box-shadow: 0px 0px 34px 1px rgba(255, 204, 0, 1);
+}
+
+.slide-img {
+  border-radius: 5px;
+  background-size: contain;
+  background-position: center;
+  filter: brightness(1.2) saturate(1) contrast(1);
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: filter 300ms linear, transform 200ms linear, scale 250ms;
+}
+
+.image-slider__wrapper:hover > .swiper-slider__wrapper:not(:hover) .slide-img {
+  filter: brightness(0.6) saturate(1) contrast(1) blur(1px);
+}
+
+@media screen and (max-width: 767.98px) {
+  .slider-container {
+    display: none;
+  }
+}
+
+.slide-img:hover {
+  transform: scale(1.08) translateZ(0);
+  box-shadow: 0px 0px 15px 10px rgba(255, 0, 0, 0.7);
+}
+
+.film-cards {
+  overflow-anchor: none;
+}
+.cards__list {
+  overflow-anchor: none;
+}
+.body {
+  overflow-anchor: none;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  transition: transform 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+
+  @media screen and (max-width: $desktop) {
+    width: 10px;
+    height: 10px;
+  }
+
+  &:hover {
+    transform: scale(1.5);
+    background-color: white;
+    box-shadow: 0px 0px 15px 10px rgba(255, 0, 0, 0.7);
+  }
+}

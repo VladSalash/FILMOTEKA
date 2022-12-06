@@ -1,0 +1,104 @@
+.switcher {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.switcher-lib {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 32px;
+  height: 15px;
+  @media screen and (min-width: $tablet) {
+    width: 36px;
+    height: 19px;
+  }
+}
+.theme-switch-icon {
+  fill: var(--btn-accent-color);
+  stroke: var(--btn-accent-color);
+  height: 100%;
+  width: 100%;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border: 1px solid var(--switcher-color);
+  z-index: 2;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 11px;
+  width: 11px;
+  left: 2px;
+  bottom: 1px;
+  background-color: var(--btn-accent-color);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  @media screen and (min-width: $tablet) {
+    height: 13px;
+    width: 13px;
+    left: 3px;
+    bottom: 2px;
+  }
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.switcher-theme-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  outline: none;
+  border: none;
+  color: var(--primary-text-color);
+  font-size: 12px;
+  line-height: 24px;
+  font-family: $base-font;
+  font-style: italic;
+  @media screen and (min-width: $tablet) and (max-width: $desktop) {
+    font-size: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+  }
+}

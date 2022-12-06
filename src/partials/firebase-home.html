@@ -1,0 +1,80 @@
+<div class="backdrop-fr hidden">
+  <div class="modal-container">
+    <div class="form-button">
+      <button
+        id="form-button__close"
+        class="form-button__close"
+        type="button"
+      ></button>
+      <p class="form-button__text">
+        Hi. In order to use the movie library on the site and create your own,
+        you need to log in. If you haven't registered yet, select register and
+        do it, it won't take long.
+      </p>
+      <div class="form-button__btn">
+        <button type="button" class="sign-up" id="sign-up-btn">Sign up</button>
+        <button type="button" class="sign-in" id="sign-in-btn">Login</button>
+      </div>
+    </div>
+    <!-- форма регистрации -->
+    <form class="form-sighUp hidden" id="login-sighUp">
+      <button type="button" class="form-sighUp__close"></button>
+      <h1 class="form-sighUp__title">Sing up</h1>
+      <input
+        type="text"
+        id="usernameSighUp"
+        name="username"
+        placeholder="User name"
+      />
+      <input type="email" id="emailSighUp" name="email" placeholder="E-mail" />
+      <input
+        type="password"
+        name="password"
+        id="passwordSighUp"
+        placeholder="password"
+      />
+      <input type="submit" name="signep_submit" id="sighUp" value="OK" />
+    </form>
+    <!-- форма входа -->
+    <form class="form-login hidden" id="login-box">
+      <button type="button" class="form-login__close"></button>
+      <h1 class="form-login__title">Login</h1>
+      <input type="email" id="email" name="email" placeholder="E-mail" />
+      <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="password"
+      />
+      <input type="submit" name="login" id="login" value="Login" />
+    </form>
+  </div>
+</div>
+
+<div class="login-user" id="loginUser">
+  <p class="login-user__text">
+    <span class="login-user__name">Guest</span>
+  </p>
+
+  <button class="login-user__btn" type="button">
+    <svg class="login-user__icon enter" width="30" height="30">
+      <use href="./image/symbol-defs.svg#icon-enter"></use>
+    </svg>
+    <svg class="login-user__icon check hidden" width="30" height="30">
+      <use href="./image/symbol-defs.svg#icon-user-check"></use>
+    </svg>
+  </button>
+</div>
+
+<div class="user-exit hidden">
+  <div class="user-exit__modal">
+    <p class="user-exit__text">
+      Do you really want to leave your account? If you leave, you will not have
+      access to your personal movie library.
+    </p>
+    <div class="user-exit__btn">
+      <button type="button" class="user-exit__ok">OK</button>
+      <button type="button" class="user-exit__not">NOT</button>
+    </div>
+  </div>
+</div>

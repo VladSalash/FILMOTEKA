@@ -1,0 +1,25 @@
+.page {
+  background-color: var(--bg-color-header);
+  color: var(--primari-text-color);
+
+  font-family: $base-font;
+  font-weight: 500;
+  font-size: $font-paragraph;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  &.modal-open {
+    @media screen and (min-width: 320px) {
+      overflow: hidden;
+    }
+  }
+  &.menu-open {
+    @media screen and (min-width: 320px) {
+      overflow: hidden;
+    }
+  }
+}
+
+body {
+  background-color: var(--bg-body-color);
+}
